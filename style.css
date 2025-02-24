@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex; 
+    background-image: url(imgs/hire-me-background.png);
+    background-size: 100%;
+    font-family: Arial, sans-serif;
+    margin-left: 700px;
+    margin-right: 700px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.container {
+    background: rgb(238, 238, 238);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 720px;
+    height: auto;
+}
+
+h2 {    
+    font-family: "Poppins", serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: xx-large;    
+    text-transform: uppercase;
+    text-align: center; 
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 2px solid rgb(121,178,208);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    height: 120px;
+    background-color: rgb(238, 238, 238);
+    resize: none;
+}
+
+button {
+    background-color: rgb(121,178,208);
+    color: rgb(231, 231, 231);
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: rgb(100, 150, 180);
+}

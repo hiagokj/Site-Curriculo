@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire.me</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="container">
+        <h2>Preencha suas informações</h2>
+        <form id="cvForm">
+            <label>Nome: <input type="text" id="nome" required></label><br><br>
+            <label>Email: <input type="email" id="email" required></label><br><br>
+            <label>Telefone: <input type="text" id="telefone" required></label><br><br>            
+            <label>Estado Civil: <input type="text" id="estadoCivil"></label><br><br>
+            <label>Cidade: <input type="text" id="cidade"></label><br><br>
+            <label>Bairro: <input type="text" id="bairro"></label><br><br>
+            <label>Rua: <input type="text" id="rua"></label><br><br>           
+            <label>Ensino Superior: <input type="text" id="superior"></label><br><br>
+            <label>Experiência Profissional: </label><br>
+            <textarea id="experiencia" rows="10"></textarea><br><br>
+            <button type="button" onclick="gerarCurriculo()">Gerar Currículo</button>
+        </form>   
+
+    <script src="script.js"></script>
+</body>
+</html>
