@@ -21,6 +21,11 @@
             <label>Ensino Superior: <input type="text" id="superior"></label><br><br>
             <label>Experiência Profissional: </label><br>
             <textarea id="experiencia" rows="10"></textarea><br><br>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <label for="foto">Escolha uma foto:</label>
+                <input type="file" id="foto" name="foto" accept="image/*">
+                <button type="submit">Enviar</button>
+            </form>            
             <button type="button" onclick="gerarCurriculo()">Gerar Currículo</button>
         </form>   
 

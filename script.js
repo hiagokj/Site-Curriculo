@@ -30,10 +30,10 @@ function gerarCurriculo() {
             <p><strong>Cidade:</strong> ${cidade}</p>
             <p><strong>Bairro:</strong> ${bairro}</p>
             <p><strong>Rua:</strong> ${rua}</p>
-            <p><strong>Ensino Superior:</strong> ${superior}</p>
+            <p><strong>Ensino Superior:</strong> ${superior}</p>            
             <p><strong>Experiência Profissional</strong></p>
             <p>${experiencia.replace(/\n/g, "<br>")}</p>
-        </div>
+
     </body>
     </html>
     `);
