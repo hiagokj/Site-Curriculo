@@ -1,49 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Currículo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body class="curriculo-page">
+    <div id="Listagem" class="preview">
+      <div class="curriculo-container">
         <h2>Meu Currículo</h2>
-        <div class="preview">
-            <p><strong>Nome:</strong> <span id="cvNome"></span></p>
-            <p><strong>Email:</strong> <span id="cvEmail"></span></p>
-            <p><strong>Telefone:</strong> <span id="cvTelefone"></span></p>                        
-            <p><strong>Civil:</strong> <span id="estadoCivil"></span><p>
-            <p><strong>Cidade:</strong> <span id="cidade"></span><p>
-            <p><strong>Bairro:</strong> <span id="bairro"></span><p>
-            <p><strong>Rua:</strong><span id="rua"> </span><p>           
-            <p><strong>Ensino Superior:</strong> <span id="superior"></span><p>
-            <p><strong>Experiência Profissional:</strong> </span><p>
-            <p id="cvExperiencia"></p>
-        </div>
+        <div class="dados-pessoais"></div>
+        <div class="experiencia-box"></div>
+      </div>
+      <button onclick="window.history.back()" class="btn-voltar">
+        Voltar ao Formulário
+      </button>
     </div>
-
-    <script>
-        function carregarCurriculo() {            
-            var dados = localStorage.getItem("curriculo");
-
-            if (dados) {
-                var curriculo = JSON.parse(dados);
-                document.getElementById("cvNome").textContent = curriculo.nome;
-                document.getElementById("cvEmail").textContent = curriculo.email;
-                document.getElementById("cvTelefone").textContent = curriculo.telefone;
-                document.getElementById("cvExperiencia").textContent = curriculo.experiencia;
-            } else {
-                alert("Nenhum currículo encontrado. Preencha o formulário primeiro.");
-                window.location.href = "index.html";
-            }
-        }
-
-        function voltar() {
-            window.location.href = "index.html";
-        }
-        
-        window.onload = carregarCurriculo;
-    </script>
-</body>
+    <script src="curriculoScript.js"></script>
+  </body>
 </html>

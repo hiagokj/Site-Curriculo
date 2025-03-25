@@ -1,34 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hire.me</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
     <div class="container">
-        <h2>Preencha suas informações</h2>
-        <form id="cvForm">
-            <label>Nome: <input type="text" id="nome" required></label><br><br>
-            <label>Email: <input type="email" id="email" required></label><br><br>
-            <label>Telefone: <input type="text" id="telefone" required></label><br><br>            
-            <label>Estado Civil: <input type="text" id="estadoCivil"></label><br><br>
-            <label>Cidade: <input type="text" id="cidade"></label><br><br>
-            <label>Bairro: <input type="text" id="bairro"></label><br><br>
-            <label>Rua: <input type="text" id="rua"></label><br><br>           
-            <label>Ensino Superior: <input type="text" id="superior"></label><br><br>
-            <label>Experiência Profissional: </label><br>
-            <textarea id="experiencia" rows="10"></textarea><br><br>
-            <form action="/upload" method="post" enctype="multipart/form-data">
-                <label for="foto">Escolha uma foto:</label>
-                <input type="file" id="foto" name="foto" accept="image/*">
-                <button type="submit">Enviar</button>
-            </form>            
-            <button type="button" onclick="gerarCurriculo()">Gerar Currículo</button>
-        </form>   
+      <h2>PREENCHA SUAS INFORMAÇÕES</h2>
+      <form id="cvForm">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" required />
+        </div>
 
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="estadoCivil">Estado Civil</label>
+          <input type="text" id="estadoCivil" />
+        </div>
+
+        <div class="form-group">
+          <label>Cidade: </label>
+          <input type="text" id="cidade" />
+        </div>
+        <div class="form-group">
+          <label>Bairro: </label> 
+          <input type="text" id="bairro" />
+        </div>
+        <div class="form-group">
+            <label>Rua:  </label>
+            <input type="text" id="rua" />
+        </div>
+        <div class="form-group">
+            <label>Ensino Superior:  
+            <input type="text" id="superior" />
+        </div>
+        <div class="form-group">
+          <label>Experiência Profissional: </label>
+          <textarea id="experiencia" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+            <div class="upload-area">
+                <label for="foto" style="cursor: pointer">
+                  <div style="font-size: 1.2rem; margin-bottom: 0.5rem">
+                    📷 Clique para adicionar foto
+                  </div>
+                  <div style="color: #7f8c8d; font-size: 0.9rem">
+                    Formatos suportados: JPG, PNG
+                  </div>
+                </label>
+                <input type="file" id="foto" accept="image/*" />
+                <img
+                  id="previewFoto"
+                  src="#"
+                  alt="Pré-visualização"
+                  style="display: none; max-width: 200px; margin: 10px 0" />
+              </div>
+              <button type="button" onclick="gerarCurriculo()">Gerar Currículo</button>
+        </div>
+        </div>
+        <!-- Continue com os demais campos no mesmo padrão -->
+      </form>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
