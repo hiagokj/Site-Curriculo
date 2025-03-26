@@ -1,460 +1,141 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  display: flex;
-  background-image: url(imgs/hire-me-background.png);
-  background-size: 100%;
-  font-family: Arial, sans-serif;
-  margin-left: 700px;
-  margin-right: 700px;
-  margin-top: 10px;
-  margin-bottom: 100px;
-}
-
-.container {
-  background: rgb(238, 238, 238);
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #666696;
+  margin: 0;
   padding: 20px;
-  width: 720px;
-  height: auto;
-}
-
-h2 {
-  font-family: "Poppins", serif;
-  font-weight: bold;
-  font-style: italic;
-  font-size: xx-large;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-  border: 2px solid rgb(121, 178, 208);
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-textarea {
-  height: 120px;
-  background-color: rgb(238, 238, 238);
-  resize: none;
-}
-
-button {
-  background-color: rgb(121, 178, 208);
-  color: rgb(231, 231, 231);
-  font-size: 1.1em;
-  padding: 10px 20px;
-  border: 2px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: rgb(100, 150, 180);
-}
-
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  background: white;
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  background: #ffffff;
+  padding: 50px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 }
 
-h2 {
-  color: #2c3e50;
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
+h1 {
   text-align: center;
+  color: #333;
   font-weight: 600;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
 label {
-  font-weight: 500;
-  color: #34495e;
+  font-weight: 600;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-top: 15px;
+  color: #555;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+input, textarea {
   width: 100%;
-  padding: 0.8rem 1.2rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border-color: #3498db;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 80px;
+}
+
+button {
+  margin-top: 20px;
+  background: #28a745;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #218838;
+}
+
+/* Estilizando a saída do currículo */
+.cv-output {
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.cv-output h2 {
+  text-align: center;
+  color: #333;
+  border-bottom: 3px solid #28a745;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.cv-output p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Botão de download */
+#downloadBtn {
+  display: none;
+  margin-top: 20px;
+  background: #007bff;
+}
+
+#downloadBtn:hover {
+  background: #0056b3;
+}
+
+.cv-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 input[type="file"] {
   display: none;
 }
 
-/* Estilização personalizada para o upload de foto */
-.upload-area {
-  border: 2px dashed #bdc3c7;
-  border-radius: 15px;
-  padding: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.upload-area:hover {
-  border-color: #3498db;
-  background: #f8f9fa;
-}
-
-#previewFoto {
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 1rem auto;
-}
-
-button[type="button"] {
-  background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+.custom-file-upload {
+  display: inline-block;
+  background-color: #28a745;
   color: white;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 16px;
   font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 1rem;
-}
-
-button[type="button"]:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .container {
-    padding: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  input,
-  textarea {
-    padding: 0.7rem 1rem;
-  }
-}
-
-/* Efeito de foco moderno */
-input:focus,
-textarea:focus {
-  background: #f8f9fa;
-}
-
-/* Estilos adicionais */
-.preview-hidden {
-  display: none !important;
-}
-
-.btn-voltar {
-  background: #e74c3c !important;
-  margin-top: 2rem;
-}
-
-.curriculo-content {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2rem;
-}
-
-.foto-perfil {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.dados-pessoais p {
-  margin: 0.8rem 0;
-  padding: 0.5rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-}
-
-.experiencia-box {
-  grid-column: 1 / -1;
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-  .curriculo-content {
-    grid-template-columns: 1fr;
-  }
-
-  .foto-perfil {
-    margin: 0 auto;
-  }
-}
-
-.btn-voltar {
-  background: #3498db;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 2rem;
-  display: block;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  margin-top: 10px;
   transition: background 0.3s ease;
 }
 
-.btn-voltar:hover {
-  background: #2980b9;
+.custom-file-upload:hover {
+  background-color: #218838;
 }
 
-/* ESTILOS ESPECÍFICOS DO CURRÍCULO */
-
-.curriculo-container {
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 3rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.curriculo-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background: linear-gradient(90deg, #3498db 0%, #2ecc71 100%);
-}
-
-.curriculo-container h2 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 2rem;
+#imagePreview {
+  margin-top: 15px;
   text-align: center;
-  position: relative;
-  padding-bottom: 1rem;
 }
 
-.curriculo-container h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: #3498db;
-  border-radius: 2px;
+#imagePreview img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
-.curriculo-content {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: 2.5rem;
-  position: relative;
-}
-
-.foto-perfil {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  border: 4px solid white;
-  transition: transform 0.3s ease;
-}
-
-.foto-perfil:hover {
-  transform: scale(1.03);
-}
-
-.dados-pessoais {
-  padding: 1.5rem;
-  background: #f8f9fa;
-  border-radius: 15px;
-}
-
-.dados-pessoais p {
-  margin: 1rem 0;
-  padding: 0.8rem 1.2rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: center;
-}
-
-.dados-pessoais strong {
-  color: #3498db;
-  min-width: 140px;
-  display: inline-block;
-  font-weight: 600;
-}
-
-.experiencia-box {
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 15px;
-  margin-top: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  position: relative;
-}
-
-.experiencia-box h3 {
-  color: #2c3e50;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.experiencia-box h3::before {
-  content: "📌";
-  font-size: 1.2em;
-}
-
-.experiencia-box p {
-  line-height: 1.8;
-  color: #34495e;
-  white-space: pre-line;
-  padding: 1rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-}
-
-.btn-voltar {
-  background: linear-gradient(135deg, #3498db 0%, #2ecc71 100%);
-  color: white;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 2rem auto 0;
-  display: block;
-}
-
-.btn-voltar:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-}
-
-/* RESPONSIVIDADE */
-@media (max-width: 768px) {
-  .curriculo-container {
-    padding: 1.5rem;
-    margin: 1rem;
-  }
-
-  .curriculo-content {
-    grid-template-columns: 1fr;
-  }
-
-  .foto-perfil {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
-
-  .dados-pessoais p {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .dados-pessoais strong {
-    min-width: auto;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.curriculo-container {
-  animation: fadeIn 0.6s ease-out;
-}
-
-.dados-pessoais p {
-  transition: transform 0.3s ease;
-}
-
-.dados-pessoais p:hover {
-  transform: translateX(10px);
-}
