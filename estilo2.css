@@ -1,166 +1,62 @@
-/* style.css - Estilo Atualizado */
 :root {
-  --primary-color: #2563eb;
-  --secondary-color: #3b82f6;
-  --accent-color: #7c3aed;
-  --background-color: #f8fafc;
-  --text-color: #1e293b;
-  --hover-color: #4f46e5;
-  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --primary: #e0e0e0;
+  --secondary: #00adb5;
+  --accent: #ff2e63;
+  --background: #222831;
 }
 
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  line-height: 1.5;
-  margin-top: 5rem;
-  padding: 2rem;
-  background-color: var(--background-color);
-  color: var(--text-color);
+.curriculo-page {
+  background: var(--background);
+  color: var(--primary);
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
 }
 
 .curriculo-container {
   max-width: 800px;
-  margin: 4rem auto;
-  background: white;
+  margin: 2rem auto;
   padding: 3rem;
-  border-radius: 1.5rem;
-  box-shadow: var(--box-shadow);
-  position: relative;
+  background: #393e46;
+  border-radius: 10px;
 }
 
 h2 {
-  color: var(--primary-color);
-  text-align: center;
-  margin-bottom: 2.5rem;
-  font-size: 2.25rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  color: var(--secondary);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
 }
 
 .foto-perfil {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  display: block;
-  margin: -100px auto 2.5rem;
-  border: 4px solid white;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   object-fit: cover;
-}
-
-.dados-pessoais {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  margin-bottom: 2.5rem;
-  padding: 2rem;
-  background: #f1f5f9;
-  border-radius: 1rem;
+  border: 4px solid var(--secondary);
+  box-shadow: 0 0 20px rgba(0,173,181,0.3);
 }
 
 .dados-pessoais p {
-  margin: 0;
-  display: flex;
-  gap: 0.75rem;
-  font-size: 1.125rem;
-  line-height: 1.75;
-}
-
-.dados-pessoais strong {
-  color: var(--primary-color);
-  min-width: 120px;
-  font-weight: 600;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  padding: 0.8rem;
+  background: #2d333b;
+  border-radius: 5px;
 }
 
 .experiencia-box {
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 1rem;
-  border-left: 4px solid var(--secondary-color);
-  margin-top: 2rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.experiencia-box h3 {
-  color: var(--accent-color);
-  margin: 0 0 1.5rem 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.experiencia-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.experiencia-box li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid #e2e8f0;
-  font-size: 1.125rem;
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.experiencia-box li:last-child {
-  border-bottom: none;
-}
-
-.experiencia-box li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: var(--secondary-color);
-}
-
-.btn-voltar, button {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.875rem 2rem;
-  border: none;
-  border-radius: 0.75rem;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  border-left: 4px solid var(--secondary);
+  padding-left: 2rem;
+  margin: 2rem 0;
 }
 
 button {
+  background: linear-gradient(45deg, var(--secondary), #00979d);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
   margin: 0.5rem;
-  background-color: var(--accent-color);
-}
-
-.btn-voltar:hover, button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  background-color: var(--hover-color);
-}
-
-@media (max-width: 768px) {
-  body {
-      padding: 1rem;
-  }
-  
-  .curriculo-container {
-      padding: 1.5rem;
-      margin: 2rem 1rem;
-  }
-  
-  .foto-perfil {
-      width: 120px;
-      height: 120px;
-      margin-top: -80px;
-  }
-  
-  .dados-pessoais p {
-      flex-direction: column;
-      gap: 0.25rem;
-  }
-  
-  .dados-pessoais strong {
-      min-width: auto;
-  }
+  font-weight: bold;
+  text-transform: uppercase;
 }

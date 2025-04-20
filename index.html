@@ -11,28 +11,31 @@
   </head>
   <body>
     <div class="container">
-      <h2>PREENCHA SUAS INFORMAÇÕES</h2>
-      <form id="cvForm">
+        <h2>PREENCHA SUAS INFORMAÇÕES</h2>
+        <form id="cvForm">
+          <div>
+          <!--endereço-->
+          <h4>Dados Pessoais:</h4>
         <div class="form-group">
-          <label for="nome">Nome</label>
+          <label for="nome">Nome:</label>
           <input type="text" id="nome" required />
         </div>
-
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email">Email:</label>
           <input type="email" id="email" required />
         </div>
-
         <div class="form-group">
-          <label for="telefone">Telefone</label>
+          <label for="telefone">Telefone:</label>
           <input type="text" id="telefone" required />
         </div>
-
         <div class="form-group">
-          <label for="estadoCivil">Estado Civil</label>
+          <label for="estadoCivil">Estado Civil:</label>
           <input type="text" id="estadoCivil" />
         </div>
-
+        </div>
+        <!--endereço-->
+        <div>
+        <h4>Endereço:</h4>
         <div class="form-group">
           <label>Cidade: </label>
           <input type="text" id="cidade" />
@@ -45,16 +48,55 @@
             <label>Rua:  </label>
             <input type="text" id="rua" />
         </div>
+      </div>
+      <!--escolaridade-->
+      <div>
+        <h4>Escolaridade:</h4>
         <div class="form-group">
             <label>Ensino Superior:  
             <input type="text" id="superior" />
         </div>
-        <div class="form-group">
-          <label>Experiência Profissional: </label>
-          <textarea id="experiencia" rows="10"></textarea>
+        <div class="form-grid"> 
+          <div class="form-group">
+              <label>Data Início*</label>
+              <input id="Escolaridade_data" type="month" required>
+          </div>
+          <div class="form-group">
+              <label>Data Término</label>
+              <input id="Escolaridade_data_final" type="month">
+          </div>
+      </div>
+      <!--Experiência-->
+      <div>
+        <h4>Experiência:</h4>
+        <div id="experiencias-container">
+          <div class="experiencia-item">
+            <div class="form-group">
+              <label>Cargo: </label>
+              <input type="text" id="Cargo" />
+            </div>
+            <div class="form-group">
+              <label>Resumo: </label>
+              <textarea id="experiencia" rows="10"></textarea>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Data Início*</label>
+                <input id="Experiência_data" type="month" required />
+              </div>
+              <div class="form-group">
+                <label>Data Término</label>
+                <input id="Experiência_data_final" type="month" />
+              </div>
+            </div>
+          </div>
         </div>
+        <button type="button" onclick="adicionarExperiencia()">Adicionar Experiência</button>
+      </div>
+      
+      <form>
         <div class="form-group">
-            <div class="upload-area">
+          <div class="upload-area">
                 <label for="foto" style="cursor: pointer">
                   <div style="font-size: 1.2rem; margin-bottom: 0.5rem">
                     📷 Clique para adicionar foto
@@ -71,7 +113,7 @@
                   style="display: none; max-width: 200px; margin: 10px 0" />
               </div>
               <button type="button" onclick="gerarCurriculo()">Gerar Currículo</button>
-        </div>
+          </div>
         </div>
         <!-- Continue com os demais campos no mesmo padrão -->
       </form>

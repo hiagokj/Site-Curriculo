@@ -2,7 +2,7 @@
  body {
     background: var(--deep-space);
     font-family: 'Orbitron', sans-serif;
-    color: #fff;
+    color: #020202;
     margin: 2rem;
     overflow-x: hidden;
   }
@@ -14,6 +14,10 @@
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 210mm !important; /* Tamanho A4 */
+    min-height: 297mm !important;
+    margin: 0 auto !important;
+    background: white !important;
 }
 
 h2 {
@@ -42,6 +46,9 @@ h2 {
 .experiencia-box h3 {
     color: #3498db;
     margin-bottom: 1rem;
+}
+p{
+    color: black;
 }
 
 .foto-perfil {
@@ -73,7 +80,8 @@ h2 {
 /* Botões de Troca de Estilo */
 button[onclick*="estilo1.css"],
 button[onclick*="estilo2.css"],
-button[onclick*="style.css"] {
+button[onclick*="estilo3.css"],
+button[onclick*="baixarPDF"] {
     background: #3498db;
     color: white;
     border: none;
@@ -86,7 +94,8 @@ button[onclick*="style.css"] {
 
 button[onclick*="estilo1.css"]:hover,
 button[onclick*="estilo2.css"]:hover,
-button[onclick*="style.css"]:hover {
+button[onclick*="estilo3.css"]:hover,
+button[onclick*="baixarPDF"]:hover {
     opacity: 0.9;
 }
 
