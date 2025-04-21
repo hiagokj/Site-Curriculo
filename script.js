@@ -25,32 +25,43 @@ function gerarCurriculo() {
     "bairro",
     "rua",
     "superior",
-    "experiencia",
-    "Cargo",
-    "Escolaridade_data",
-    "Experiência_data"
+    "Escolaridade_data"
   ];
 
-  const camposOpcionais = [
-    "Escolaridade_data_final",
-    "Experiência_data_final"
-  ];
   const dados = {};
   let isValid = true;
 
+  // Captura os campos obrigatórios
   camposObrigatorios.forEach((campo) => {
     const element = document.getElementById(campo);
     dados[campo] = element.value.trim();
     if (!element.value.trim()) isValid = false;
   });
 
-  camposOpcionais.forEach((campo) => {
-    const element = document.getElementById(campo);
-    const valor = element.value.trim();
-    if (valor) {
-      dados[campo] = valor;
+  // Captura as experiências dinâmicas
+  const experiencias = [];
+  document.querySelectorAll("#experiencias-container .experiencia-item").forEach((item) => {
+    const cargo = item.querySelector(".Cargo").value.trim();
+    const resumo = item.querySelector(".experiencia").value.trim();
+    const dataInicio = item.querySelector(".Experiência_data").value.trim();
+    const dataTermino = item.querySelector(".Experiência_data_final").value.trim();
+
+    if (cargo && dataInicio) {
+      experiencias.push({
+        cargo,
+        resumo,
+        dataInicio,
+        dataTermino: dataTermino || null 
+        
+      });
     }
   });
+
+  if (experiencias.length === 0) {
+    isValid = false;
+  }
+
+  dados.experiencias = experiencias;
 
   const fotoInput = document.getElementById("foto");
 
@@ -62,9 +73,6 @@ function gerarCurriculo() {
   const reader = new FileReader();
   reader.onload = function (e) {
     dados.foto = e.target.result;
-    if (!dados.Escolaridade_data_final) delete dados.Escolaridade_data_final;
-    if (!dados.Experiência_data_final) delete dados.Experiência_data_final;
-    
     localStorage.setItem("curriculo", JSON.stringify(dados));
     window.location.href = "curriculo.html";
   };
@@ -96,8 +104,14 @@ function adicionarExperiencia() {
         <input type="month" class="Experiência_data_final" />
       </div>
     </div>
+    <button type="button" class="btn-excluir" onclick="excluirExperiencia(this)">Excluir</button>
   `;
 
   // Adiciona o novo formulário ao contêiner
   container.appendChild(novaExperiencia);
+}
+
+function excluirExperiencia(botao) {
+  const experienciaItem = botao.closest(".experiencia-item");
+  experienciaItem.remove();
 }

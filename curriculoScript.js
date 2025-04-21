@@ -16,36 +16,37 @@ function renderizarCurriculo() {
     });
   };
 
+  const experienciasHTML = dados.experiencias
+    .map((exp) => `
+      <div class="experiencia-item">
+        <p><strong>Cargo:</strong> ${exp.cargo}</p>
+        <p><strong>Resumo:</strong> ${exp.resumo.replace(/\n/g, "<br>")}</p>
+        <p><strong>Data Início:</strong> ${formatarData(exp.dataInicio)}</p>
+        ${exp.dataTermino ? `<p><strong>Data Término:</strong> ${formatarData(exp.dataTermino)}</p>` : ''}
+      </div>
+    `)
+    .join("");
+
   const html = `
     <div class="curriculo-content">
       <img src="${dados.foto}" alt="Foto" class="foto-perfil">
       <div class="dados-pessoais">
-      <div class="experiencia-box">
-      <h3>Dados Pessoais</h3>
+        <h3>Dados Pessoais</h3>
         <p><strong>Nome:</strong> ${dados.nome}</p>
         <p><strong>Email:</strong> ${dados.email}</p>
         <p><strong>Telefone:</strong> ${dados.telefone}</p>
-        ${dados.estadoCivil ? `<p><strong>Estado Civil:</strong> ${dados.estadoCivil}</p>` : ''}
+        <p><strong>Estado Civil:</strong> ${dados.estadoCivil}</p>
         <p><strong>Endereço:</strong> ${dados.rua}, ${dados.bairro}, ${dados.cidade}</p>
       </div>
-      
       <div class="experiencia-box">
-      <h3>Escolaridade</h3>
+        <h3>Escolaridade</h3>
         <p><strong>Ensino Superior:</strong> ${dados.superior}</p>
         <p><strong>Data Início:</strong> ${formatarData(dados.Escolaridade_data)}</p>
-        ${dados.Escolaridade_data_final ? 
-          `<p><strong>Data Conclusão:</strong> ${formatarData(dados.Escolaridade_data_final)}</p>` : ''}
-      </di>
+        ${dados.Escolaridade_data_final ? `<p><strong>Data Conclusão:</strong> ${formatarData(dados.Escolaridade_data_final)}</p>` : ''}
       </div>
       <div class="experiencia-box">
         <h3>Experiência Profissional</h3>
-        <p><strong>Data Início:</strong> ${formatarData(dados.Experiência_data)}</p>
-        ${dados.Experiência_data_final ? 
-          `<p><strong>Data Término:</strong> ${formatarData(dados.Experiência_data_final)}</p>` : ''}
-          ${dados.Cargo ? `<p><strong>Cargo:</strong> ${dados.Cargo}</p>` : ''}
-        <div class="experiencia-texto">
-          ${dados.experiencia ? dados.experiencia.replace(/\n/g, "<br>") : ''}
-        </div>
+        ${experienciasHTML}
       </div>
     </div>
     <div class="controles">
@@ -76,14 +77,14 @@ async function baixarPDF() {
     const width = element.offsetWidth;
     const height = element.offsetHeight;
     
-    // Configurações do PDF
+   
     const pdf = new jsPDF("p", "mm", "a4");
     const pageWidth = pdf.internal.pageSize.getWidth();
     const pageHeight = pdf.internal.pageSize.getHeight();
     
-    // Configurações da imagem
+   
     const canvas = await html2canvas(element, {
-      scale: 4, // Reduzir escala para melhor qualidade
+      scale: 4, 
       useCORS: true,
       logging: true,
       windowWidth: width,
@@ -94,13 +95,12 @@ async function baixarPDF() {
     });
 
     const imgData = canvas.toDataURL("image/png", 1.0);
-    
-    // Calcular proporções
-    const imgWidth = pageWidth - 20; // Margem de 10mm cada lado
+  
+    const imgWidth = pageWidth - 20; 
     const imgHeight = (canvas.height * imgWidth) / canvas.width;
     
-    // Adicionar páginas se necessário
-    let position = 10; // Margem superior inicial
+    
+    let position = 10;
     let remainingHeight = imgHeight;
 
     while (remainingHeight > 0) {
