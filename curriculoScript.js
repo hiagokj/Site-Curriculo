@@ -20,9 +20,9 @@ function renderizarCurriculo() {
     .map((exp) => `
       <div class="experiencia-item">
         <p><strong>Cargo:</strong> ${exp.cargo}</p>
-        <p><strong>Resumo:</strong> ${exp.resumo.replace(/\n/g, "<br>")}</p>
         <p><strong>Data Início:</strong> ${formatarData(exp.dataInicio)}</p>
         ${exp.dataTermino ? `<p><strong>Data Término:</strong> ${formatarData(exp.dataTermino)}</p>` : ''}
+        <p><strong>Resumo:</strong> ${exp.resumo.replace(/\n/g, "<br>")}</p>
       </div>
     `)
     .join("");
