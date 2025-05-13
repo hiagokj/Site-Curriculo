@@ -100,8 +100,9 @@ button[onclick*="baixarPDF"]:hover {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-    body {
+
+@media screen and (max-width: 768px) {
+     body {
         margin: 1rem;
     }
     .curriculo-container {
@@ -110,6 +111,63 @@ button[onclick*="baixarPDF"]:hover {
     .foto-perfil {
         width: 120px;
         height: 120px;
+    }
+    .curriculo-container {
+        padding: 1rem;
+        margin: 0.5rem auto;
+        border-radius: 10px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .dados-pessoais p {
+        margin: 0.5rem 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        margin: 0.5rem;
+    }
+    
+    .curriculo-container {
+        padding: 0.75rem;
+        border-radius: 8px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    .experiencia-box {
+        padding: 0.75rem;
+    }
+    
+    .btn-voltar {
+        padding: 0.7rem 1.2rem;
+    }
+    
+    button[onclick*=".css"],
+    button[onclick*="baixarPDF"] {
+        font-size: 0.85rem;
+        padding: 0.6rem;
+    }
+}
+
+@media print {
+    .curriculo-container {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0 !important;
+        padding: 1.5cm !important;
+    }
+    
+    .btn-voltar,
+    button[onclick*=".css"] {
+        display: none !important;
     }
 }
 .experiencia-item {
