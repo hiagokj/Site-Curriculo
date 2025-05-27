@@ -82,10 +82,37 @@ function gerarCurriculo() {
   reader.readAsDataURL(fotoInput.files[0]);
 }
 
+function adicionarEscolaridade() {
+  const container = document.getElementById("Escolaridade_container");
+
+  const novaEscolaridade = document.createElement("div");
+  novaEscolaridade.classList.add("experiencia-item");
+
+  novaEscolaridade.innerHTML = `
+  <div class="form-group">
+    <div>
+      <label>Ensino Superior:  
+      <input type="text" id="superior" />
+    </div>
+  </div>
+    <div class="form-grid"> 
+      <div class="form-group">
+        <label>Data Início*</label>
+        <input id="Escolaridade_data" type="month" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Data Término</label>
+      <input id="Escolaridade_data_final" type="month">
+    </div>
+    <button type="button" class="btn-excluir" onclick="excluirExperiencia(this)">Excluir</button>
+  `;
+
+  container.appendChild(novaEscolaridade);
+}
 function adicionarExperiencia() {
   const container = document.getElementById("experiencias-container");
 
-  // Cria um novo elemento de experiência profissional
   const novaExperiencia = document.createElement("div");
   novaExperiencia.classList.add("experiencia-item");
   novaExperiencia.innerHTML = `
@@ -110,7 +137,6 @@ function adicionarExperiencia() {
     <button type="button" class="btn-excluir" onclick="excluirExperiencia(this)">Excluir</button>
   `;
 
-  // Adiciona o novo formulário ao contêiner
   container.appendChild(novaExperiencia);
 }
 
