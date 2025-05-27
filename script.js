@@ -25,7 +25,7 @@ function gerarCurriculo() {
     "bairro",
     "rua",
     "superior",
-    "Escolaridade_data"
+    "Escolaridade_data",
   ];
 
   const dados = {};
@@ -40,22 +40,25 @@ function gerarCurriculo() {
 
   // Captura as experiências dinâmicas
   const experiencias = [];
-  document.querySelectorAll("#experiencias-container .experiencia-item").forEach((item) => {
-    const cargo = item.querySelector(".Cargo").value.trim();
-    const resumo = item.querySelector(".experiencia").value.trim();
-    const dataInicio = item.querySelector(".Experiência_data").value.trim();
-    const dataTermino = item.querySelector(".Experiência_data_final").value.trim();
+  document
+    .querySelectorAll("#experiencias-container .experiencia-item")
+    .forEach((item) => {
+      const cargo = item.querySelector(".Cargo").value.trim();
+      const resumo = item.querySelector(".experiencia").value.trim();
+      const dataInicio = item.querySelector(".Experiência_data").value.trim();
+      const dataTermino = item
+        .querySelector(".Experiência_data_final")
+        .value.trim();
 
-    if (cargo && dataInicio) {
-      experiencias.push({
-        cargo,
-        resumo,
-        dataInicio,
-        dataTermino: dataTermino || null 
-        
-      });
-    }
-  });
+      if (cargo && dataInicio) {
+        experiencias.push({
+          cargo,
+          resumo,
+          dataInicio,
+          dataTermino: dataTermino || null,
+        });
+      }
+    });
 
   if (experiencias.length === 0) {
     isValid = false;

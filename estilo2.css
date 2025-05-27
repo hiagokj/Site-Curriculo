@@ -1,212 +1,134 @@
 :root {
-  --primary: #e0e0e0;
-  --secondary: #00adb5;
-  --accent: #ff2e63;
-  --background: #222831;
+  --primary: #2b2d42;
+  --accent: #ef233c;
+  --highlight: #8d99ae;
 }
 
-.curriculo-page {
-  background: var(--background);
-  color: var(--primary);
-  font-family: 'Roboto', sans-serif;
-  min-height: 100vh;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 1rem;
 }
 
 .curriculo-container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 3rem;
-  background: #393e46;
-  border-radius: 10px;
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.curriculo-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 120px;
+  background: var(--primary);
+  transform: rotate(-2deg);
+  z-index: 0;
 }
 
 h2 {
-  color: var(--secondary);
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+  padding: 1rem 0;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  text-align: center;
+}
+
+.dados-pessoais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+  position: relative;
+  z-index: 1;
 }
 
 .foto-perfil {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--secondary);
-  box-shadow: 0 0 20px rgba(0,173,181,0.3);
-}
-
-.dados-pessoais p {
-  margin: 1rem 0;
-  font-size: 1.1rem;
-  padding: 0.8rem;
-  background: #2d333b;
-  border-radius: 5px;
+  margin: 0 auto;
+  border: 3px solid var(--accent);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .experiencia-box {
-  border-left: 4px solid var(--secondary);
-  padding-left: 2rem;
-  margin: 2rem 0;
-}
-
-button {
-  background: linear-gradient(45deg, var(--secondary), #00979d);
-  border: none;
-  padding: 1rem 2.5rem;
-  border-radius: 5px;
-  margin: 0.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.experiencia-item {
-  border: 1px solid var(--secondary);
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-}
-
-.experiencia-item p {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  color: var(--primary);
-}
-
-.experiencia-item strong {
-  color: var(--secondary);
-}
-:root {
-  --primary: #e0e0e0;
-  --secondary: #00adb5;
-  --accent: #ff2e63;
-  --background: #222831;
-}
-
-.curriculo-page {
-  background: var(--background);
-  color: var(--primary);
-  font-family: 'Roboto', sans-serif;
-  min-height: 100vh;
-  padding: 1rem;
-}
-
-.curriculo-container {
-  max-width: 95%;
-  margin: 1.5rem auto;
-  padding: clamp(1.5rem, 5vw, 3rem);
-  background: #393e46;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-
-h2 {
-  color: var(--secondary);
-  font-size: clamp(1.8rem, 6vw, 2.5rem);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1.5rem;
-}
-
-.foto-perfil {
-  width: clamp(120px, 30vw, 180px);
-  height: clamp(120px, 30vw, 180px);
-  border: 3px solid var(--secondary);
-  box-shadow: 0 0 15px rgba(0,173,181,0.2);
-}
-
-.dados-pessoais p {
-  margin: 0.8rem 0;
-  font-size: clamp(1rem, 3vw, 1.1rem);
-  padding: 0.6rem;
-}
-
-.experiencia-box {
-  border-left: 3px solid var(--secondary);
-  padding-left: 1.5rem;
   margin: 1.5rem 0;
-}
-
-button {
-  padding: 0.8rem 1.5rem;
-  font-size: clamp(0.9rem, 3vw, 1rem);
-  width: 100%;
-  margin: 0.3rem 0;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .experiencia-item {
+  margin: 1rem 0;
   padding: 1rem;
-  margin-bottom: 1.2rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-left: 4px solid var(--accent);
 }
 
-.experiencia-item p {
-  font-size: clamp(0.95rem, 3vw, 1rem);
-  margin: 0.4rem 0;
+.controles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin-top: 1.5rem;
 }
 
-@media screen and (max-width: 768px) {
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+@media (min-width: 768px) {
   .curriculo-container {
-    margin: 1rem auto;
-    padding: 1.2rem;
+    padding: 2.5rem;
+    margin: 2rem auto;
   }
-  
-  .experiencia-box {
-    padding-left: 1rem;
-    border-width: 2px;
-  }
-  
-  .dados-pessoais p {
-    margin: 0.6rem 0;
-  }
-}
 
-@media screen and (max-width: 480px) {
-  .curriculo-page {
-    padding: 0.5rem;
+  .curriculo-container::before {
+    left: 0;
+    width: 35%;
+    height: 100%;
+    transform: none;
   }
-  
+
   h2 {
-    letter-spacing: 0.5px;
-    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 2rem;
   }
-  
-  .experiencia-box {
-    padding-left: 0.8rem;
-  }
-  
-  button {
-    padding: 0.7rem 1rem;
-  }
-  
-  .experiencia-item {
-    padding: 0.8rem;
-  }
-}
 
-@media print {
-  .curriculo-page {
-    background: white;
-    color: black;
+  .dados-pessoais {
+    grid-template-columns: 150px 1fr;
+    align-items: center;
   }
-  
-  .curriculo-container {
-    background: white !important;
-    box-shadow: none;
-    padding: 0 !important;
-  }
-  
-  button {
-    display: none;
-  }
-  
+
   .foto-perfil {
-    border-color: #666;
-    box-shadow: none;
+    width: 150px;
+    height: 150px;
   }
-  
-  h2 {
-    color: #444;
+
+  .controles {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
   }
 }
