@@ -132,3 +132,59 @@ button {
     gap: 1rem;
   }
 }
+
+@media (max-width: 767px) {
+  .curriculo-container::before {
+    height: 80px;
+    transform: rotate(-4deg);
+    left: -70%;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 6.5vw, 2rem);
+    padding: 0.5rem 0;
+  }
+
+  .dados-pessoais {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
+  }
+
+  .experiencia-box {
+    padding: 0.75rem;
+    margin: 1rem 0;
+  }
+
+  button {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .curriculo-container {
+    padding: 1rem !important;
+    border-radius: 10px;
+  }
+
+  .experiencia-item {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+
+  .controles {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .curriculo-container {
+    max-width: 95% !important;
+  }
+}

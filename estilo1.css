@@ -1,80 +1,79 @@
-/* Estilo 1 - Tema Claro & Minimalista */
- body {
-    background: var(--deep-space);
-    font-family: 'Orbitron', sans-serif;
-    color: #020202;
-    margin: 2rem;
-    overflow-x: hidden;
-  }
+body {
+  background: var(--deep-space);
+  font-family: "Orbitron", sans-serif;
+  color: #020202;
+  margin: 2rem;
+  overflow-x: hidden;
+}
 
 .curriculo-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 210mm !important; /* Tamanho A4 */
-    min-height: 297mm !important;
-    margin: 0 auto !important;
-    background: white !important;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 210mm !important; /* Tamanho A4 */
+  min-height: 297mm !important;
+  margin: 0 auto !important;
+  background: white !important;
 }
 
 h2 {
-    color: #2c3e50;
-    border-bottom: 3px solid #3498db;
-    padding-bottom: 1rem;
-    font-size: 2.5em;
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 1rem;
+  font-size: 2.5em;
 }
 
 .dados-pessoais p {
-    color: #34495e;
-    font-size: 1.1em;
-    margin: 1rem 0;
-    padding: 0.5rem;
-    background-color: #f0f4f8;
-    border-radius: 8px;
+  color: #34495e;
+  font-size: 1.1em;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: #f0f4f8;
+  border-radius: 8px;
 }
 
 .experiencia-box {
-    background-color: #f0f4f8;
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-top: 1.5rem;
+  background-color: #f0f4f8;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
 }
 
 .experiencia-box h3 {
-    color: #3498db;
-    margin-bottom: 1rem;
+  color: #3498db;
+  margin-bottom: 1rem;
 }
-p{
-    color: black;
+p {
+  color: black;
 }
 
 .foto-perfil {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #3498db;
-    margin: 1rem auto;
-    display: block;
-    object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #3498db;
+  margin: 1rem auto;
+  display: block;
+  object-fit: cover;
 }
 
 .btn-voltar {
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-top: 2rem;
-    transition: transform 0.2s;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: transform 0.2s;
 }
 
 .btn-voltar:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
 }
 
 /* Botões de Troca de Estilo */
@@ -82,108 +81,165 @@ button[onclick*="estilo1.css"],
 button[onclick*="estilo2.css"],
 button[onclick*="estilo3.css"],
 button[onclick*="baixarPDF"] {
-    background: #3498db;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 20px;
-    margin: 0.5rem;
-    cursor: pointer;
-    transition: opacity 0.3s;
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
 
 button[onclick*="estilo1.css"]:hover,
 button[onclick*="estilo2.css"]:hover,
 button[onclick*="estilo3.css"]:hover,
 button[onclick*="baixarPDF"]:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 /* Responsividade */
 
 @media screen and (max-width: 768px) {
-     body {
-        margin: 1rem;
-    }
-    .curriculo-container {
-        padding: 1rem;
-    }
-    .foto-perfil {
-        width: 120px;
-        height: 120px;
-    }
-    .curriculo-container {
-        padding: 1rem;
-        margin: 0.5rem auto;
-        border-radius: 10px;
-    }
-    
-    h2 {
-        font-size: 1.8rem;
-    }
-    
-    .dados-pessoais p {
-        margin: 0.5rem 0;
-    }
+  body {
+    margin: 1rem;
+  }
+  .curriculo-container {
+    padding: 1rem;
+  }
+  .foto-perfil {
+    width: 120px;
+    height: 120px;
+  }
+  .curriculo-container {
+    padding: 1rem;
+    margin: 0.5rem auto;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .dados-pessoais p {
+    margin: 0.5rem 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    body {
-        margin: 0.5rem;
-    }
-    
-    .curriculo-container {
-        padding: 0.75rem;
-        border-radius: 8px;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-        padding-bottom: 0.5rem;
-    }
-    
-    .experiencia-box {
-        padding: 0.75rem;
-    }
-    
-    .btn-voltar {
-        padding: 0.7rem 1.2rem;
-    }
-    
-    button[onclick*=".css"],
-    button[onclick*="baixarPDF"] {
-        font-size: 0.85rem;
-        padding: 0.6rem;
-    }
+  body {
+    margin: 0.5rem;
+  }
+
+  .curriculo-container {
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .experiencia-box {
+    padding: 0.75rem;
+  }
+
+  .btn-voltar {
+    padding: 0.7rem 1.2rem;
+  }
+
+  button[onclick*=".css"],
+  button[onclick*="baixarPDF"] {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
 }
 
 @media print {
-    .curriculo-container {
-        box-shadow: none;
-        border-radius: 0;
-        margin: 0 !important;
-        padding: 1.5cm !important;
-    }
-    
-    .btn-voltar,
-    button[onclick*=".css"] {
-        display: none !important;
-    }
+  .curriculo-container {
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0 !important;
+    padding: 1.5cm !important;
+  }
+
+  .btn-voltar,
+  button[onclick*=".css"] {
+    display: none !important;
+  }
 }
 .experiencia-item {
-    border: 1px solid var(--secondary);
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.experiencia-item p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.experiencia-item strong {
+  color: var(--secondary);
+}
+
+@media screen and (max-width: 768px) {
+  .curriculo-container {
+    width: 95% !important;
+    min-height: auto !important;
+    padding: 1rem !important;
   }
-  
-  .experiencia-item p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    color: var(--primary);
+
+  h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    padding-bottom: 0.75rem;
   }
-  
-  .experiencia-item strong {
-    color: var(--secondary);
+
+  .dados-pessoais p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    padding: 0.3rem;
   }
+
+  .experiencia-item {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 0.6rem 1rem !important;
+    font-size: clamp(0.8rem, 3vw, 0.9rem);
+    flex: 1 1 120px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .foto-perfil {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .btn-voltar {
+    width: 100%;
+    padding: 0.8rem !important;
+    border-radius: 15px;
+  }
+
+  .dados-pessoais {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Adicionar para telas médias */
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .curriculo-container {
+    max-width: 90% !important;
+  }
+
+  .experiencia-box {
+    padding: 1rem !important;
+  }
+}
