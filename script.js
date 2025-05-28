@@ -91,19 +91,19 @@ function adicionarEscolaridade() {
   novaEscolaridade.innerHTML = `
   <div class="form-group">
     <div>
-      <label>Ensino Superior:  
+      <label>Ensino:  
       <input type="text" id="superior" />
     </div>
   </div>
-    <div class="form-grid"> 
+    <div class="form-grid">
       <div class="form-group">
         <label>Data Início*</label>
-        <input id="Escolaridade_data" type="month" required>
+        <input type="month" class="Experiência_data" required />
       </div>
-    </div>
-    <div class="form-group">
-      <label>Data Término</label>
-      <input id="Escolaridade_data_final" type="month">
+      <div class="form-group">
+        <label>Data Término</label>
+        <input type="month" class="Experiência_data_final" />
+      </div>
     </div>
     <button type="button" class="btn-excluir" onclick="excluirExperiencia(this)">Excluir</button>
   `;
